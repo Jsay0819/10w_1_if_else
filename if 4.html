@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나이</title>
+  </head>
+  <body>
+    <script>
+      var age = prompt("나이를 입력하세요.");
+      var displayArea = document.querySelector("result");
+      if (age !== null) {
+        if (parseInt(age) >= 18) {
+          alert("성인입니다.");
+          displayArea.innerHTML = "성인입니다.";
+        } else {
+          alert("미성년입니다.");
+          displayArea.innerHTML = "미성년입니다.";
+        }
+      } else {
+        alert("입력이 취소 되었습니다.");
+      }
+    </script>
+  </body>
+</html>

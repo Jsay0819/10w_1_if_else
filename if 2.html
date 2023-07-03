@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3의 배수 확인</title>
+  </head>
+  <body>
+    <h1>3의 배수 확인</h1>
+    <label for="number">숫자 : </label>
+    <input type="number" id="number" />
+    <button onclick="checkMultipleOfThree()">확인</button>
+    <p id="result"></p>
+
+    <script>
+      // * 기본
+      // function checkMultipleOfThree() {
+      //   var userNumber = document.getElementById("number").value;
+      //   var resultElement = document.getElementById("result");
+      //   if (userNumber % 3 === 0) {
+      //     resultElement.textContent = userNumber + "은 3의 배수입니다.";
+      //   } else {
+      //     resultElement.textContent = userNumber + "은 3의 배수가 아닙니다.";
+      //   }
+      // }
+
+      function checkMultipleOfThree() {
+        var userNumber = document.getElementById("number").value;
+        var resultElement = document.getElementById("result");
+
+        // * 중첩 if ~ else 문 *
+        //   if (userNumber !== "") {
+        //     if (userNumber % 3 === 0) {
+        //       resultElement.textContent = userNumber + "은 3의 배수입니다.";
+        //     } else {
+        //       resultElement.textContent = userNumber + "은 3의 배수가 아닙니다.";
+        //     }
+        //   } else {
+        //     resultElement.textContent = "값이 입력되지 않았습니다.";
+        //   }
+        //
+
+        // * 조건 ? 조건이 true 일 때 : 조건이 false 일 때 *
+        resultElement.textContent =
+          userNumber !== ""
+            ? userNumber % 3 === 0
+              ? `${userNumber}은(는) 3의 배수입니다.`
+              : `${userNumber}은(는) 3의 배수가 아닙니다.`
+            : "숫자를 입력해주세요.";
+        // alert ("숫자를 입력해주세요") -> 알림창으로 뜸
+      }
+    </script>
+  </body>
+</html>

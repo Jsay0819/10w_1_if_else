@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>짝수 홀수</title>
+  </head>
+  <body>
+    <h1>짝수 홀수</h1>
+    <label for="number">숫자 :</label>
+    <input type="number" id="number" />
+    <button onclick="zzakhol()">확인</button>
+    <p id="result"></p>
+
+    <script>
+      function zzakhol() {
+        var userNumber = document.getElementById("number").value;
+        var resultElement = document.getElementById("result");
+
+        // * 값 비교 , 같을 때 , 값 비었을 때 *
+        resultElement.textContent =
+          userNumber !== ""
+            ? userNumber % 2 === 0
+              ? `${userNumber}은(는) 짝수입니다.`
+              : `${userNumber}은(는) 홀수입니다.`
+            : alert("숫자를 입력해주세요");
+
+        // var userNumber = prompt("숫자를 입력하세요.");
+        // if (userNumber !== null) {
+        //   if (userNumber % 2 === 0) {
+        //     alert("짝수입니다.");
+        //   } else {
+        //     alert("홀수입니다.");
+        //   }
+        // } else {
+        //   alert("입력이 취소되었습니다.");
+        // }
+      }
+    </script>
+  </body>
+</html>
